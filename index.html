@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Heat index hour visualization</title>
+
+		<!-- Load CSS libraries -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- GOOGLE FONTS -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+	</head>
+
+	<!-- SOME SAMPLE HTML HERE - DELETE EVERYTHING INSIDE THE BODY EXCEPT THE SCRIPTS ON THE BOTTOM TO START FROM SCRATCH -->
+	<!-- DON'T WRITE CSS IN YOUR HTML LIKE WE DID HERE - THE INLINE CSS SHOULD HELP YOU TO UNDERSTAND THE BEHAVIOR OF THE ELEMENTS BETTER -
+		 WHEN SUBMITTING, WE ALWAYS EXPECT CLEAR SEPARATION OF HTML, CSS, AND JS INTO THE PROPER FILES -->
+	<body>
+	<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">CS171 Team KCK</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Background</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	<section>
+			<div class="container"  style="background-color:white;">
+				<p id="opening">Instructions</p>
+				<p class="opening2">- Please input a name of the city you are interested in to find when is the dangerous to stay outside</p>
+				<p class="opening2">- We support 18,664 cities and link them to 1,018 weather stations located at the airports around the US</p>
+				<center>
+					<form id="form1">
+						<input class="zipcode" list="zipcodelist"  id="userdata" autocomplete="off" class="form-control" placeholder = "Input city here">
+						<datalist id="zipcodelist"></datalist>
+						<button class="zipcode" type="button" onclick="saveUserData()" class="btn btn-danger btn-lg mx-auto w-50 text-center">Enter</button>
+					</form>
+				</center>
+				<p class="opening2">- Click on the chart to zoom into month or day</p>
+				<p class="opening2">- Hover on the chart and statistics will appear for a given period</p>
+				<p class="opening2">- When is the most dangerous day in your city? Can you guess which city in the US is in most risk to heat?</p>
+				<h1 class="title" id="title_location"></h1>
+				<p class="subtitle">Annual</p>
+				<div id="total_nv"></div>
+				<div class="row justify-content-center" style="height: 300px;margin-bottom: 40px">
+					<div class="align-self-center">
+						<div id="Chart_1"></div>
+					</div>
+				</div>
+				<div class="row justify-content-center" style="height: 400px;">
+					<div class="col-md-4" style="text-align:center;">
+						<p class="subtitle" id="month_subtitle">Monthly</p>
+						<div id="Chart_2"></div>
+					</div>
+					<div class="col-md-4" style="text-align:center;">
+						<p class="subtitle" id="day_subtitle">Daily</p>
+						<div id="Chart_3"></div>
+					</div>
+					<div class="col-md-4" style="text-align:center;">
+						<p class="subtitle">Legend</p>
+						<div id="legend"></div>
+					</div>
+				</div>
+			</div>
+
+		<footer class="py-5 bg-dark">
+			<div class="container" class="text-center">
+				<p class="m-0 text-center text-white">Copyright &copy; Team KCK</p>
+			</div>
+			<!-- /.container -->
+		</footer>
+	</section>
+
+
+
+
+
+	<!-- embedding JS libraries -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	<!-- d3 -->
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+
+	<!-- own js files -->
+	<script src="js/main.js"></script>
+	</body>
+</html>
