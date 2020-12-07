@@ -24,7 +24,7 @@ body {
 }
 
 #opening {
-    font: 20px Arial, sans-serif;
+    font: 24px Arial, sans-serif;
     font-weight: bold;
     padding-top: 100px;
     margin-bottom: 20px;
@@ -32,7 +32,7 @@ body {
 }
 
 .opening2 {
-    font: 14px Arial, sans-serif;
+    font: 16px Arial, sans-serif;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -169,5 +169,12 @@ body {
 
 .circle:hover{
     opacity: 0.5;
+}
+
+.referlink {
+    font: 8px Arial, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
