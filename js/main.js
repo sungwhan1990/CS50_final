@@ -432,7 +432,7 @@ function saveUserData() {
                     else {
                         tag = "th";
                     }
-                    document.getElementById("day_subtitle").innerHTML = k + " " + (i+1) + tag;
+                    document.getElementById("day_subtitle").innerHTML = k + (i+1) + tag;
                     d3.select("#Chart_3")
                         .select("svg")
                         .remove()

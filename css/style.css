@@ -120,3 +120,54 @@ body {
 .side{
     width: 50px;
 }
+
+
+
+
+
+
+
+.container {
+    max-width: 1920px;
+    width: 80%;
+}
+
+.axis1 {
+    font: 13px Arial, sans-serif;
+}
+
+.axis2 {
+    font: 13px Arial, sans-serif;
+    font-weight: bold;
+}
+
+.axis1 path {
+    display: none;
+}
+
+.axis2 path {
+    display: none;
+}
+
+.scale {
+    font: 16px Arial, sans-serif;
+    font-weight: bold;
+}
+
+.legend {
+    font: 12px Arial, sans-serif;
+}
+
+.legend2 {
+    font-size: 10px;
+}
+
+.button {
+    border-radius: 5px;
+}
+
+
+.circle:hover{
+    opacity: 0.5;
+}
+

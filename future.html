@@ -44,23 +44,22 @@
 	</nav>
 
 	<section>
-			<div class="container"  style="background-color:white;height: 300px">
-				<p id="opening">What is a Heat index?</p>
-				<p class="opening2">- Please input information of a location you are interested in and find when is the dangerous to stay outside</p>
-				<p class="opening2">- We support 18,664 cities and link them to 1,018 weather stations located at the airports around the US</p>
-				<p class="opening2">- Click on the chart to zoom into month or day</p>
-				<p class="opening2">- Hover on the chart and statistics will appear for a given period</p>
-				<p class="opening2">- When is the most dangerous day in your city? Can you guess which city in the US is in most risk to heat?</p>
-			</div>
-			<div class="container"  style="background-color:white;height: 300px">
-				<p id="opening">What is a Heat index?</p>
-				<p class="opening2">- Please input information of a location you are interested in and find when is the dangerous to stay outside</p>
-				<p class="opening2">- We support 18,664 cities and link them to 1,018 weather stations located at the airports around the US</p>
-				<p class="opening2">- Click on the chart to zoom into month or day</p>
-				<p class="opening2">- Hover on the chart and statistics will appear for a given period</p>
-				<p class="opening2">- When is the most dangerous day in your city? Can you guess which city in the US is in most risk to heat?</p>
-			</div>
+			<div class="container"  style="background-color:white;">
+				<p id="opening">Instructions</p>
+				<p class="opening2">- Here we selected ten cities those represent ten different climates within the US</p>
+				<p class="opening2">- Which city has the most increase? How much impact would we have in our daily life?</p>
+				<p class="opening2">- May you guess what is the main factor causing the increase?</p>
 
+				<h1 class="title">Future heat index hours at the ten cities around the US</h1>
+				<div class="row justify-content-center" style="height: 700px;margin-bottom: 40px">
+					<div class="align-self-center">
+						<b class = scale>Sort by: </b>
+						<button id="btn1" onclick="chart_name()"> By name </button>
+						<button id="btn2" onclick="chart_hour()"> By hours </button>
+						<div id="Chart_1"></div>
+					</div>
+				</div>
+			</div>
 
 		<footer class="py-5 bg-dark">
 			<div class="container" class="text-center">
@@ -83,5 +82,6 @@
 	<script src="https://d3js.org/d3.v6.min.js"></script>
 
 	<!-- own js files -->
+	<script src="js/main2.js"></script>
 	</body>
 </html>
